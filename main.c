@@ -1,88 +1,33 @@
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-struct Item{
-	int it;
-};
-typedef struct Item item;
-
-struct Stack{
-	int maxsize;
-	item *stk;
-	int top;
-};
-typedef struct Stack stack;
-
-stack init_stack();
-stack push_stack(stack, int);
-stack pop_stack(stack);
-void print_stack(stack);
-void del_stack(stack);
-
-stack init_stack(){
-	stack i;
-	
-	i.maxsize = 32;
-	i.top = 0;
-	i.stk = calloc(i.maxsize, sizeof(item));
-	
-	return i;
-}
-
-stack push_stack(stack pu, int n){
-		
-	if(pu.top == pu.maxsize){
-		pu.maxsize+=32;
-		item *new = calloc(pu.maxsize, sizeof(item));
-		memcpy(new, pu.stk, (pu.maxsize-32)*sizeof(item));
-		free(pu.stk);
-		
-		pu.stk = new;
-	}
-	
-	pu.stk[pu.top].it = n;
-	pu.top++;
-	
-	return pu;
-}
-
-stack pop_stack(stack po){
-	po.stk[po.top].it = 0;
-	po.top--;
-	
-	return po;
-}
-
-void print_stack(stack pr){
-	int i;
-	for(i = pr.maxsize; i > -1; i--){
-		printf("pos:\t%d\tval:\t%d\n", i, pr.stk[i].it);
-	}
-}
-
-void del_stack(stack d){
-	free(d.stk);
-}
+#include "stack.h"
 
 int main(){
-	stack s = init_stack();
+	stack st = init_stack();
+
+	object ob = init_object();
 	
-	int i = 0;
-	for(i = 0; i < 40; i++){
-		s = push_stack(s, i);
-	}
+	short x[] = {123, 345, 456, 567};
+	short y[] = {123, 345, 456, 567};
+	short points = 4;
+	short color[] = {0, 255, 0, 255};
+	short z = 0;
 	
-	print_stack(s);
+	shape sh1 = init_shape(x, y, points, color, z);
+	ob = push_object(ob, sh1);
+	shape sh2 = init_shape(x, y, points, color, z);
+	ob = push_object(ob, sh2);
+	shape sh3 = init_shape(x, y, points, color, z);
+	ob = push_object(ob, sh3);
 	
-	for(i = 0; i < 20; i++){
-		s = pop_stack(s);
-	}
+	st = push_stack(st, ob);
 	
-	print_stack(s);
+	print_stack(st);
 	
-	del_stack(s);
+	
+	del_object(ob);
+	del_stack(st);
 	
 	return 0;
 }
