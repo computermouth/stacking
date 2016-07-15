@@ -10,6 +10,13 @@ struct Stack{
 };
 typedef struct Stack stack;
 
+
+stack init_stack();
+stack push_stack(stack, int);
+stack pop_stack(stack);
+void print_stack(stack);
+void del_stack(stack);
+
 stack init_stack(){
 	stack i;
 	
@@ -21,19 +28,34 @@ stack init_stack(){
 }
 
 stack push_stack(stack pu, int n){
-	
+		
 	if(pu.top == pu.maxsize){
-		int *new = calloc(pu.maxsize+32, sizeof(int));
-		memcpy(pu.stk, new, sizeof(int));
+		pu.maxsize+=32;
+		int *new = calloc(pu.maxsize, sizeof(int));
+		memcpy(new, pu.stk, (pu.maxsize-32)*sizeof(int));
 		free(pu.stk);
 		
 		pu.stk = new;
 	}
 	
-	pu.top++;
 	pu.stk[pu.top] = n;
+	pu.top++;
 	
 	return pu;
+}
+
+stack pop_stack(stack po){
+	po.stk[po.top] = 0;
+	po.top--;
+	
+	return po;
+}
+
+void print_stack(stack pr){
+	int i;
+	for(i = pr.maxsize; i > -1; i--){
+		printf("pos:\t%d\tval:\t%d\n", i, pr.stk[i]);
+	}
 }
 
 void del_stack(stack d){
@@ -43,13 +65,18 @@ void del_stack(stack d){
 int main(){
 	stack s = init_stack();
 	
-	while(s.top < 65){
-		printf("pre-stack top: %d\n", s.stk[s.top]);
-		
-		s = push_stack(s, s.top);
-		
-		printf("post-stack top: %d\n", s.stk[s.top]);
+	int i = 0;
+	for(i = 0; i < 35; i++){
+		s = push_stack(s, i);
 	}
+	
+	print_stack(s);
+	
+	for(i = 0; i < 3; i++){
+		s = pop_stack(s);
+	}
+	
+	print_stack(s);
 	
 	del_stack(s);
 	
