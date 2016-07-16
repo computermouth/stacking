@@ -27,6 +27,8 @@ struct Stack{
 typedef struct Stack stack;
 
 shape init_shape(short *, short *, short, short *, short);
+void print_shape(shape);
+void del_shape(shape);
 
 object init_object();
 object push_object(object, shape);
