@@ -24,37 +24,37 @@ shape init_shape(short *x, short *y, short points, short *color, short z){
 }
 
 void print_shape(shape pr){
-	//~ printf("\t\t[shape start]\n");
-	//~ //printx
-	//~ int i = 0;
-	//~ printf("\t\t\tx:\t");
-	//~ for(; i < pr.points; i++){
-		//~ printf(" %d", pr.x[i]);
-	//~ }
-	//~ printf("\n");
+	printf("\t\t[shape start]\n");
+	//printx
+	int i = 0;
+	printf("\t\t\tx:\t");
+	for(; i < pr.points; i++){
+		printf(" %d", pr.x[i]);
+	}
+	printf("\n");
 	
-	//~ //printy
-	//~ i = 0;
-	//~ printf("\t\t\ty:\t");
-	//~ for(; i < pr.points; i++){
-		//~ printf(" %d", pr.y[i]);
-	//~ }
-	//~ printf("\n");
+	//printy
+	i = 0;
+	printf("\t\t\ty:\t");
+	for(; i < pr.points; i++){
+		printf(" %d", pr.y[i]);
+	}
+	printf("\n");
 	
-	//~ //printpoints
-	//~ printf("\t\t\tp:\t %d\n", pr.points);
+	//printpoints
+	printf("\t\t\tp:\t %d\n", pr.points);
 	
-	//~ //printcolor
-	//~ printf("\t\t\tc:\t");
-	//~ for(i = 0; i < 4; i++){
-		//~ printf(" %d", pr.color[i]);
-	//~ }	
-	//~ printf("\n");
+	//printcolor
+	printf("\t\t\tc:\t");
+	for(i = 0; i < 4; i++){
+		printf(" %d", pr.color[i]);
+	}	
+	printf("\n");
 	
-	//~ //printpoints
-	//~ printf("\t\t\tz:\t %d\n", pr.z);
+	//printpoints
+	printf("\t\t\tz:\t %d\n", pr.z);
 	
-	//~ printf("\t\t[shape end]\n");
+	printf("\t\t[shape end]\n");
 }
 
 void del_shape(shape ds){
