@@ -1,4 +1,4 @@
-OBJ_DIR = objects/
+OBJ_DIR = stack/objects/
 
 BLEEN_DIR = bleen/
 BLEEN_SH = blue.c green.c
@@ -17,9 +17,13 @@ S_OBJS += $(RED)
 
 OBJS = $(addprefix $(OBJ_DIR), $(S_OBJS))
 
+O_OBJS = $(addprefix $(OBJ_DIR), *.c)
+
+OBJS += $(O_OBJS)
+
 ALL_DIR = $(BLEEN_DIR) $(RED_DIR) $(PURP_DIR)
 
-MAIN = main.c stack.c $(OBJS)
+MAIN = main.c stack/stack.c $(OBJS)
 MAIN_NAME = stacking
 
 .PHONY: all clean lint
@@ -27,8 +31,6 @@ MAIN_NAME = stacking
 all: $(MAIN)
 	gcc $(MAIN) -Wall -o $(MAIN_NAME)
 
-curr: main.c stack/stack.c stack/objects/o_bleen.c stack/objects/bleen/*.c
-	gcc main.c stack/stack.c stack/objects/o_bleen.c stack/objects/bleen/*.c -Wall -o stacking
 clean:
 	rm *.o $(MAIN_NAME) $(addsuffix *.o, $(ALL_DIR))
 
