@@ -4,4 +4,4 @@
 
 shape red();
 
-#endif _RED_H_
+#endif

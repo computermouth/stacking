@@ -4,4 +4,4 @@
 
 shape purp();
 
-#endif _PURP_H_
+#endif

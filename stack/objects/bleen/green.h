@@ -4,4 +4,4 @@
 
 shape green();
 
-#endif _GREEN_H_
+#endif

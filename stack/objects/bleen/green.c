@@ -1,14 +1,14 @@
 
-#include "stack.h"
+#include "../../stack.h"
 #include "green.h"
 
 shape green(){
 	
-	short x[] = {300, 600, 600, 300};
-	short y[] = {600, 600, 300, 300};
+	short x[] = {200, 300, 300, 200};
+	short y[] = {300, 300, 200, 200};
 	short points = 4;
 	short color[] = {0, 255, 0, 255};
-	short z = 7;
+	short z = 2;
 	
 	shape sh = init_shape(x, y, points, color, z);
 

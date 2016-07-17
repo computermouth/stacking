@@ -190,5 +190,13 @@ void print_stack(stack pr){
 }
 
 void del_stack(stack d){
+	int o;
+	for(o = 0; o <= d.top; o++){
+		int s;
+		for(s = 0; s <= d.stk[o].top; s++){
+			del_shape(d.stk[o].shp[s]);
+		}
+		del_object(d.stk[o]);
+	}
 	free(d.stk);
 }

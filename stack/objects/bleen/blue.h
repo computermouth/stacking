@@ -4,4 +4,4 @@
 
 shape blue();
 
-#endif _BLUE_H_
+#endif
