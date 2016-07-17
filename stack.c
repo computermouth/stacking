@@ -84,9 +84,23 @@ object push_object(object pu, shape s){
 		
 		pu.shp = new;
 	}
-	
+
 	pu.top++;
 	pu.shp[pu.top] = s;
+	
+	//wasteful sort
+	shape key;
+	int j;
+	
+	for ( j = 0 ; j <= pu.top ; j++ ){
+		key = pu.shp[j];
+		int i = j - 1;
+		while ( i >= 0 && pu.shp[i].z > key.z ) {
+			pu.shp[i + 1] = pu.shp[i];
+			i = i - 1;
+		}    
+		pu.shp[i + 1] = key;
+	}
 	
 	return pu;
 }
@@ -140,6 +154,20 @@ stack push_stack(stack pu, object n){
 	
 	pu.top++;
 	pu.stk[pu.top] = n;
+	
+	//wasteful sort
+	object key;
+	int j;
+	
+	for ( j = 0 ; j <= pu.top ; j++ ){
+		key = pu.stk[j];
+		int i = j - 1;
+		while ( i >= 0 && pu.stk[i].z > key.z ) {
+			pu.stk[i + 1] = pu.stk[i];
+			i = i - 1;
+		}    
+		pu.stk[i + 1] = key;
+	}
 	
 	return pu;
 }
