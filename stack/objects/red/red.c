@@ -4,8 +4,8 @@
 
 shape red(){
 	
-	short x[] = {400, 500, 500, 400};
-	short y[] = {500, 500, 400, 400};
+	short x[] = {190, 290, 290, 190};
+	short y[] = {290, 290, 190, 190};
 	short points = 4;
 	short color[] = {255, 0, 0, 255};
 	short z = 4;

@@ -67,6 +67,7 @@ object init_object(){
 	object i;
 	
 	i.maxsize = 32;
+	i.used = -1;
 	i.top = -1;
 	i.shp = calloc(i.maxsize, sizeof(shape));
 	i.z = 0;
@@ -86,6 +87,7 @@ object push_object(object pu, shape s){
 	}
 
 	pu.top++;
+	pu.used++;
 	pu.shp[pu.top] = s;
 	
 	//wasteful sort
@@ -106,9 +108,6 @@ object push_object(object pu, shape s){
 }
 
 object pop_object(object po){
-	free(po.shp[po.top].x);
-	free(po.shp[po.top].y);
-	free(po.shp[po.top].color);
 	po.top--;
 	
 	return po;
@@ -135,6 +134,7 @@ stack init_stack(){
 	stack i;
 	
 	i.maxsize = 32;
+	i.used = -1;
 	i.top = -1;
 	i.stk = calloc(i.maxsize, sizeof(object));
 	
@@ -153,6 +153,7 @@ stack push_stack(stack pu, object n){
 	}
 	
 	pu.top++;
+	pu.used++;
 	pu.stk[pu.top] = n;
 	
 	//wasteful sort
@@ -173,7 +174,7 @@ stack push_stack(stack pu, object n){
 }
 
 stack pop_stack(stack po){
-	po.top--;
+	po.top = po.top -1;
 	
 	return po;
 }
@@ -191,9 +192,9 @@ void print_stack(stack pr){
 
 void del_stack(stack d){
 	int o;
-	for(o = 0; o <= d.top; o++){
+	for(o = 0; o <= d.used; o++){
 		int s;
-		for(s = 0; s <= d.stk[o].top; s++){
+		for(s = 0; s <= d.stk[o].used; s++){
 			del_shape(d.stk[o].shp[s]);
 		}
 		del_object(d.stk[o]);

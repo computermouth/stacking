@@ -13,6 +13,7 @@ typedef struct Shape shape;
 
 struct Object{
 	int maxsize;
+	int used;
 	shape *shp;
 	int top;
 	int z;
@@ -21,6 +22,7 @@ typedef struct Object object;
 
 struct Stack{
 	int maxsize;
+	int used;
 	object *stk;
 	int top;
 };

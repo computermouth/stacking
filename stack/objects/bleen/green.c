@@ -4,8 +4,8 @@
 
 shape green(){
 	
-	short x[] = {200, 300, 300, 200};
-	short y[] = {300, 300, 200, 200};
+	short x[] = {170, 270, 270, 170};
+	short y[] = {270, 270, 170, 170};
 	short points = 4;
 	short color[] = {0, 255, 0, 255};
 	short z = 2;

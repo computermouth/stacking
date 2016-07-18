@@ -4,8 +4,8 @@
 
 shape blue(){
 	
-	short x[] = {100, 200, 200, 100};
-	short y[] = {200, 200, 100, 100};
+	short x[] = {150, 250, 250, 150};
+	short y[] = {250, 250, 150, 150};
 	short points = 4;
 	short color[] = {0, 0, 255, 255};
 	short z = 1;

@@ -1,44 +1,26 @@
-OBJ_DIR = stack/objects/
+SOURCES := $(shell find $(SOURCEDIR) -name '*.c')
+SOURCES_H := $(shell find $(SOURCEDIR) -name '*.h')
 
-BLEEN_DIR = bleen/
-BLEEN_SH = blue.c green.c
-BLEEN = $(addprefix $(BLEEN_DIR), $(BLEEN_SH))
-S_OBJS += $(BLEEN)
-
-PURP_DIR = purp/
-PURP_SH = purp.c
-PURP = $(addprefix $(PURP_DIR), $(PURP_SH))
-S_OBJS += $(PURP)
-
-RED_DIR = red/
-RED_SH = red.c
-RED = $(addprefix $(RED_DIR), $(RED_SH))
-S_OBJS += $(RED)
-
-OBJS = $(addprefix $(OBJ_DIR), $(S_OBJS))
-
-O_OBJS = $(addprefix $(OBJ_DIR), *.c)
-
-OBJS += $(O_OBJS)
-
-ALL_DIR = $(BLEEN_DIR) $(RED_DIR) $(PURP_DIR)
-
-MAIN = main.c stack/stack.c $(OBJS)
 MAIN_NAME = stacking
+
+LIBS = -lSDL2 -lSDL2_gfx
 
 .PHONY: all clean lint
 
 all: $(MAIN)
-	gcc $(MAIN) -Wall -o $(MAIN_NAME)
+	gcc $(SOURCES) -Wall -o $(MAIN_NAME) $(LIBS)
 
 clean:
-	rm *.o $(MAIN_NAME) $(addsuffix *.o, $(ALL_DIR))
+	rm $(MAIN_NAME)
+
+run:
+	./stacking
+
+re: clean all run
 
 memtest:
 	valgrind --track-origins=yes --leak-check=yes ./$(MAIN_NAME)
 
 lint:
 	cppcheck --language=c --enable=warning,style --template=gcc\
- *.c *.h\
- $(addsuffix *.c, $(addprefix $(OBJ_DIR), $(ALL_DIR)))\
- $(addsuffix *.h, $(addprefix $(OBJ_DIR), $(ALL_DIR)))
+ $(SOURCES) $(SOURCES_H)
