@@ -1,6 +1,9 @@
 SOURCES := $(shell find $(SOURCEDIR) -name '*.c')
 SOURCES_H := $(shell find $(SOURCEDIR) -name '*.h')
 
+SOURCES_O := $(shell find $(SOURCEDIR) -name '*.o')
+SOURCES_GCH := $(shell find $(SOURCEDIR) -name '*.gch')
+
 MAIN_NAME = stacking
 
 LIBS = -lSDL2 -lSDL2_gfx
@@ -11,7 +14,7 @@ all: $(MAIN)
 	gcc $(SOURCES) -Wall -o $(MAIN_NAME) $(LIBS)
 
 clean:
-	rm $(MAIN_NAME)
+	rm $(MAIN_NAME) $(SOURCES_O) $(SOURCES_GCH)
 
 run:
 	./stacking
