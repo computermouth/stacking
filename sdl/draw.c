@@ -26,8 +26,9 @@ SDL_Renderer* draw_stack(stack drs, SDL_Renderer* renderer){
 	
 	while(drs.top >= 0){
 		while(drs.stk[drs.top].top >= 0){
-			draw_shape(drs.stk[drs.top].shp[drs.stk[drs.top].top], renderer);
-			drs.stk[drs.top] = pop_object(drs.stk[drs.top]);
+			object *top_object = &drs.stk[drs.top];
+			draw_shape(top_object->shp[top_object->top], renderer);
+			*top_object = pop_object(*top_object);
 		}
 		drs = pop_stack(drs);
 	}
