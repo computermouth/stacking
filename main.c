@@ -9,23 +9,36 @@
 
 #include "sdl/draw.h"
 
-SDL_Window*		window			= 0;
-SDL_Renderer*	renderer		= 0;
-SDL_Event		e;
-const int 		SCREEN_WIDTH	= 480;
-const int 		SCREEN_HEIGHT	= 272;
-int quit = 0;
+struct Swindow{
+	SDL_Window*		window;
+	SDL_Renderer*	renderer;
+	SDL_Event		e;
+	int 			w;
+	int 			h;
+	int 			quit;
+};
+typedef struct Swindow swindow;
 
-int init_sdl(){
+swindow init_swindow( swindow sw ){
+	sw.window			= 0;
+	sw.renderer			= 0;
+	sw.w				= 480;
+	sw.h				= 272;
+	sw.quit 			= 0;
+	
+	return sw;
+}
+
+int init_sdl(swindow *sw){
 	
 	if(SDL_Init(SDL_INIT_EVERYTHING) >= 0){
-		window = SDL_CreateWindow("Stacking",
+		sw->window = SDL_CreateWindow("Stacking",
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
-			SCREEN_WIDTH, SCREEN_HEIGHT, 
+			sw->w, sw->h, 
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 		
-		if(window != 0){
-			renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+		if(sw->window != 0){
+			sw->renderer = SDL_CreateRenderer(sw->window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 		}else{
 			return 1;
 		}
@@ -36,7 +49,7 @@ int init_sdl(){
 	return 0;
 }
 
-void window_event(SDL_Event *e){
+void window_event(SDL_Event *e, swindow *sw){
 	const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
 	//Window event occured
 	if( e->type == SDL_WINDOWEVENT )
@@ -47,12 +60,12 @@ void window_event(SDL_Event *e){
 			case SDL_WINDOWEVENT_SIZE_CHANGED:
 			//~ mWidth = e.window.data1;
 			//~ mHeight = e.window.data2;
-			SDL_RenderPresent( renderer );
+			SDL_RenderPresent( sw->renderer );
 			break;
 
 			//Repaint on exposure
 			case SDL_WINDOWEVENT_EXPOSED:
-			SDL_RenderPresent( renderer );
+			SDL_RenderPresent( sw->renderer );
 			break;
 
 			//Window has keyboard focus
@@ -100,26 +113,28 @@ void window_event(SDL_Event *e){
 	}
 }
 
-void parse_event(SDL_Event *e){
+void parse_event(SDL_Event *e, swindow *sw){
 	
 	while( SDL_PollEvent( e ) != 0 ){
 		switch(e->type){
 			case SDL_QUIT:
-				quit++;
+				sw->quit++;
 			break;
 		}
 	}
 	
-	window_event( e );
+	window_event(e , sw);
 }
 
 int main(){
 	
-	if(init_sdl() == 1)
+	swindow sw = init_swindow(sw);
+	
+	if(init_sdl(&sw) == 1)
 		return 1;
 	
-	while( !quit ){
-		parse_event(&e);
+	while( !sw.quit ){
+		parse_event(&sw.e, &sw);
 		
 		stack st = init_stack();
 		
@@ -128,16 +143,16 @@ int main(){
 		st = push_stack(st, push_red());
 
 		//print_stack(st);
-		renderer = draw_stack(st, renderer);
+		sw.renderer = draw_stack(st, sw.renderer);
 
 		del_stack(st);
 		
-		SDL_RenderPresent( renderer );
+		SDL_RenderPresent( sw.renderer );
 		
 	}
 	
-	SDL_DestroyWindow(window);
-	SDL_DestroyRenderer(renderer);
+	SDL_DestroyWindow(sw.window);
+	SDL_DestroyRenderer(sw.renderer);
 	SDL_Quit();
 	
 	return 0;
