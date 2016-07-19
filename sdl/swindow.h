@@ -8,8 +8,13 @@ struct Swindow{
 	SDL_Window*		window;
 	SDL_Renderer*	renderer;
 	SDL_Event		e;
-	int 			w;
-	int 			h;
+	int 			d_w;
+	int 			d_h;
+	int 			n_w;
+	int 			n_h;
+	int				focus;
+	int				fs;
+	int				min;
 	int 			quit;
 };
 typedef struct Swindow swindow;

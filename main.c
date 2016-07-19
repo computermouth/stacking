@@ -10,13 +10,16 @@
 #include "sdl/draw.h"
 #include "sdl/swindow.h"
 
+//~ enum Some { ONE, TWO };
+//~ typedef enum Some some;
+
 int main(){
 	
 	swindow sw = init_swindow(sw);
 	
 	if(init_sdl(&sw) == 1)
 		return 1;
-	
+		
 	while( !sw.quit ){
 		parse_event(&sw.e, &sw);
 		
