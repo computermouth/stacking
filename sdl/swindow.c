@@ -4,8 +4,8 @@
 swindow init_swindow( swindow sw ){
 	sw.window	= 0;
 	sw.renderer	= 0;
-	sw.d_w		= 480;
-	sw.d_h		= 272;
+	sw.d_w		= 800;
+	sw.d_h		= 500;
 	sw.n_w		= sw.d_w;
 	sw.n_h		= sw.d_h;
 	sw.focus	= 1;
