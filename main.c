@@ -43,9 +43,7 @@ int main(){
 		del_stack(st);
 		
 		SDL_RenderPresent( sw.renderer );
-		
-		usleep(162.5*1000);
-		
+				
 	}
 	
 	SDL_DestroyWindow(sw.window);

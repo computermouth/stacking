@@ -21,7 +21,7 @@ int init_sdl(swindow *sw){
 	if(SDL_Init(SDL_INIT_EVERYTHING) >= 0){
 		sw->window = SDL_CreateWindow("Stacking",
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
-			sw->d_w, sw->d_h, 
+			sw->n_w, sw->n_h, 
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 		
 		if(sw->window != 0){
@@ -44,9 +44,10 @@ void window_event(SDL_Event *e, swindow *sw){
 		{
 			case SDL_WINDOWEVENT_SIZE_CHANGED:
 				sw->n_w = e->window.data1;
-				sw->n_w = e->window.data2;
+				sw->n_h = e->window.data2;
+				SDL_RenderPresent( sw->renderer );
 				break;
-
+				
 			case SDL_WINDOWEVENT_FOCUS_GAINED:
 				sw->focus = 1;
 				break;
@@ -77,9 +78,8 @@ void window_event(SDL_Event *e, swindow *sw){
 			SDL_SetWindowFullscreen( sw->window, SDL_FALSE );
 			sw->fs = 0;
 		}else{
-			SDL_SetWindowFullscreen( sw->window, SDL_TRUE );
+			SDL_SetWindowFullscreen( sw->window, SDL_WINDOW_FULLSCREEN_DESKTOP );
 			sw->fs = 1;
-			sw->min = 0;
 		}
 	}
 }
