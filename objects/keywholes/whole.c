@@ -1,5 +1,5 @@
 
-#include "../../stack.h"
+#include "../../stack/stack.h"
 #include "whole.h"
 
 shape whole_a_01(){

@@ -1,5 +1,5 @@
 
-#include "../stack.h"
+#include "../stack/stack.h"
 #include "keywholes/whole.h"
 
 object push_keywhole(int i){
