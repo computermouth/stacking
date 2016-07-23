@@ -1,9 +1,10 @@
 
-#include "../stack/stack.h"
-
 #ifndef _O_KEYWHOLES_H_
 #define _O_KEYWHOLES_H_
 
-object push_keywhole(int);
+#include "../state/state.h"
+#include "../stack/stack.h"
+
+object push_keywhole(state *);
 
 #endif
