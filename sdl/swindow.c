@@ -87,29 +87,118 @@ void window_event(SDL_Event *e, swindow *sw){
 }
 
 void key_event(SDL_Event *e, state *g_st){
-	const Uint8* currentKeyStates = SDL_GetKeyboardState( NULL );
+	//~ const Uint8 *currentKeyStates = SDL_GetKeyboardState( NULL );
 
+	//~ if( e->type == SDL_KEYDOWN ){
+		//~ if(currentKeyStates[SDL_SCANCODE_ESCAPE])
+			//~ g_st->k.esc = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_RETURN])
+			//~ g_st->k.ent = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_UP])
+			//~ g_st->k.up = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_DOWN])
+			//~ g_st->k.dn = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_LEFT])
+			//~ g_st->k.lt = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_RIGHT])
+			//~ g_st->k.rt = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_W])
+			//~ g_st->k.w = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_A])
+			//~ g_st->k.a = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_S])
+			//~ g_st->k.s = 1;
+		//~ if(currentKeyStates[SDL_SCANCODE_D])
+			//~ g_st->k.d = 1;
+	//~ } else if ( e->type == SDL_KEYUP) {
+		//~ if(currentKeyStates[SDL_SCANCODE_ESCAPE])
+			//~ g_st->k.esc = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_RETURN])
+			//~ g_st->k.ent = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_UP])
+			//~ g_st->k.up = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_DOWN])
+			//~ g_st->k.dn = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_LEFT])
+			//~ g_st->k.lt = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_RIGHT])
+			//~ g_st->k.rt = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_W])
+			//~ g_st->k.w = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_A])
+			//~ g_st->k.a = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_S])
+			//~ g_st->k.s = 0;
+		//~ if(currentKeyStates[SDL_SCANCODE_D])
+			//~ g_st->k.d = 0;
+	//~ }
+	
 	if( e->type == SDL_KEYDOWN ){
-		if(currentKeyStates[SDL_SCANCODE_ESCAPE])
-			g_st->k.esc = 1;
-		if(currentKeyStates[SDL_SCANCODE_RETURN])
-			g_st->k.ent = 1;
-		if(currentKeyStates[SDL_SCANCODE_W])
-			g_st->k.w = 1;
-		if(currentKeyStates[SDL_SCANCODE_A])
-			g_st->k.a = 1;
-		if(currentKeyStates[SDL_SCANCODE_S])
-			g_st->k.w = 1;
-		if(currentKeyStates[SDL_SCANCODE_D])
-			g_st->k.d = 1;
-		if(currentKeyStates[SDL_SCANCODE_UP])
-			g_st->k.up = 1;
-		if(currentKeyStates[SDL_SCANCODE_DOWN])
-			g_st->k.dn = 1;
-		if(currentKeyStates[SDL_SCANCODE_LEFT])
-			g_st->k.lt = 1;
-		if(currentKeyStates[SDL_SCANCODE_RIGHT])
-			g_st->k.rt = 1;
+		switch(e->key.keysym.sym){
+			case SDLK_ESCAPE:
+				g_st->k.esc = 1;
+				break;
+			case SDLK_RETURN:
+				g_st->k.ent = 1;
+				break;
+			case SDLK_UP:
+				g_st->k.up = 1;
+				break;
+			case SDLK_DOWN:
+				g_st->k.dn = 1;
+				break;
+			case SDLK_LEFT:
+				g_st->k.lt = 1;
+				break;
+			case SDLK_RIGHT:
+				g_st->k.rt = 1;
+				break;
+			case SDLK_w:
+				g_st->k.w = 1;
+				break;
+			case SDLK_a:
+				g_st->k.a = 1;
+				break;
+			case SDLK_s:
+				g_st->k.s = 1;
+				break;
+			case SDLK_d:
+				g_st->k.d = 1;
+				break;
+		}
+	} else if ( e->type == SDL_KEYUP) {
+		switch(e->key.keysym.sym){
+			case SDLK_ESCAPE:
+				g_st->k.esc = 0;
+				break;
+			case SDLK_RETURN:
+				g_st->k.ent = 0;
+				break;
+			case SDLK_UP:
+				g_st->k.up = 0;
+				break;
+			case SDLK_DOWN:
+				g_st->k.dn = 0;
+				break;
+			case SDLK_LEFT:
+				g_st->k.lt = 0;
+				break;
+			case SDLK_RIGHT:
+				g_st->k.rt = 0;
+				break;
+			case SDLK_w:
+				g_st->k.w = 0;
+				break;
+			case SDLK_a:
+				g_st->k.a = 0;
+				break;
+			case SDLK_s:
+				g_st->k.s = 0;
+				break;
+			case SDLK_d:
+				g_st->k.d = 0;
+				break;
+		}
 	}
 }
 
@@ -118,7 +207,7 @@ void clear_keys(state *g_st){
 	g_st->k.ent = 0;
 	g_st->k.w = 0;
 	g_st->k.a = 0;
-	g_st->k.w = 0;
+	g_st->k.s = 0;
 	g_st->k.d = 0;
 	g_st->k.up = 0;
 	g_st->k.dn = 0;
@@ -128,14 +217,17 @@ void clear_keys(state *g_st){
 
 void parse_event(SDL_Event *e, swindow *sw, state *g_st){
 	
-	while( SDL_PollEvent( e ) != 0 ){
+	while( SDL_PollEvent( e )){
 		switch(e->type){
 			case SDL_QUIT:
 				sw->quit++;
-			break;
+				break;
+			default:
+				window_event(e , sw);
+				key_event(e , g_st);
+				break;
 		}
 	}
 	
-	window_event(e , sw);
-	key_event(e , g_st);
+
 }

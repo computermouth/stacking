@@ -32,7 +32,7 @@ int main(){
 		
 		SDL_RenderPresent( sw.renderer );
 		
-		clear_keys(&g_state);
+		//clear_keys(&g_state);
 	}
 	
 	SDL_DestroyWindow(sw.window);
