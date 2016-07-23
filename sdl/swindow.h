@@ -13,6 +13,9 @@ struct Swindow{
 	int 			d_h;
 	int 			n_w;
 	int 			n_h;
+	float			r;
+	int				p_x;
+	int				p_y;
 	int				focus;
 	int				fs;
 	int				min;

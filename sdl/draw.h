@@ -7,7 +7,7 @@
 #ifndef _DRAW_H_
 #define _DRAW_H_
 
-SDL_Renderer* draw_shape(shape, SDL_Renderer*);
-SDL_Renderer* draw_stack(stack, SDL_Renderer*);
+SDL_Renderer* draw_shape(shape, SDL_Renderer*, float);
+SDL_Renderer* draw_stack(stack, SDL_Renderer*, float);
 
 #endif

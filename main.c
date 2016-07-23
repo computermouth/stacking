@@ -26,13 +26,11 @@ int main(){
 		st = push_stack(st, push_keypurp(&g_state));
 		st = push_stack(st, push_keywhole(&g_state));
 		
-		sw.renderer = draw_stack(st, sw.renderer);
+		sw.renderer = draw_stack(st, sw.renderer, sw.r);
 		
 		del_stack(st);
 		
 		SDL_RenderPresent( sw.renderer );
-		
-		//clear_keys(&g_state);
 	}
 	
 	SDL_DestroyWindow(sw.window);
