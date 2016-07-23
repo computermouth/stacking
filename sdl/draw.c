@@ -7,24 +7,17 @@
 
 SDL_Renderer* draw_shape(shape drsh, SDL_Renderer* renderer, float r){
 	
-	short x[drsh.points];
-	short y[drsh.points];
-	int i;
-	for(i = drsh.points; i >= 0; i--){
-		x[i] = drsh.x[i];
-		y[i] = drsh.y[i];
-	}
-	
 	if (r != 1.0){
-		for(i = drsh.points; i >= 0; i--){
-			x[i] = (float)x[i] * r;
-			y[i] = (float)y[i] * r;
+		int i;
+		for(i = 0; i < drsh.points; i++){
+			drsh.x[i] = (float)drsh.x[i] * r;
+			drsh.y[i] = (float)drsh.y[i] * r;
 		}
 	}
 	
 	filledPolygonRGBA(renderer, 
-		x, 
-		y,
+		drsh.x, 
+		drsh.y,
 		drsh.points,
 		drsh.color[0], 
 		drsh.color[1], 
