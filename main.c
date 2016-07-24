@@ -11,30 +11,30 @@
 
 int main(){
 	
-	swindow sw = init_swindow(sw);
+	swindow g_swindow = init_swindow(g_swindow);
 	
-	if(init_sdl(&sw) == 1)
-		sw.quit = 1;
+	if(init_sdl(&g_swindow) == 1)
+		g_swindow.quit = 1;
 		
 	state g_state = init_state();
 	
-	while( !sw.quit ){		
-		stack st = init_stack();
+	while( !g_swindow.quit ){		
+		stack g_stack = init_stack();
 		
-		parse_event(&sw.e, &sw, &g_state);
+		parse_event(&g_swindow.e, &g_swindow, &g_state);
 		
-		st = push_stack(st, push_keypurp(&g_state));
-		st = push_stack(st, push_keywhole(&g_state));
+		g_stack = push_stack(g_stack, push_keypurp(&g_state));
+		g_stack = push_stack(g_stack, push_keywhole(&g_state));
 		
-		sw.renderer = draw_stack(st, sw.renderer, sw.r);
+		g_swindow.renderer = draw_stack(g_stack, g_swindow.renderer, g_swindow.r);
 		
-		del_stack(st);
+		del_stack(g_stack);
 		
-		SDL_RenderPresent( sw.renderer );
+		SDL_RenderPresent( g_swindow.renderer );
 	}
 	
-	SDL_DestroyWindow(sw.window);
-	SDL_DestroyRenderer(sw.renderer);
+	SDL_DestroyWindow(g_swindow.window);
+	SDL_DestroyRenderer(g_swindow.renderer);
 	SDL_Quit();
 	
 	return 0;

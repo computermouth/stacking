@@ -27,18 +27,18 @@ SDL_Renderer* draw_shape(shape drsh, SDL_Renderer* renderer, float r){
 	return renderer;
 }
 
-SDL_Renderer* draw_stack(stack drs, SDL_Renderer* renderer, float r){
+SDL_Renderer* draw_stack(stack g_stack, SDL_Renderer* renderer, float r){
 	
 	SDL_SetRenderDrawColor( renderer, 0x00, 0x00, 0x00, 0x00 );
 	SDL_RenderClear( renderer );
 	
-	while(drs.top >= 0){
-		while(drs.stk[drs.top].top >= 0){
-			object *top_object = &drs.stk[drs.top];
+	while(g_stack.top >= 0){
+		while(g_stack.stk[g_stack.top].top >= 0){
+			object *top_object = &g_stack.stk[g_stack.top];
 			draw_shape(top_object->shp[top_object->top], renderer, r);
 			*top_object = pop_object(*top_object);
 		}
-		drs = pop_stack(drs);
+		g_stack = pop_stack(g_stack);
 	}
 	
 	return renderer;

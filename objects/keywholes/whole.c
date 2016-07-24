@@ -10,9 +10,9 @@ shape whole_a_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_a_02(){
@@ -23,9 +23,9 @@ shape whole_a_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_a_03(){
@@ -36,9 +36,9 @@ shape whole_a_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_d_01(){
@@ -49,9 +49,9 @@ shape whole_d_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_d_02(){
@@ -62,9 +62,9 @@ shape whole_d_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_d_03(){
@@ -75,9 +75,9 @@ shape whole_d_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_down_01(){
@@ -89,9 +89,9 @@ shape whole_down_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_down_02(){
@@ -103,9 +103,9 @@ shape whole_down_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_down_03(){
@@ -116,9 +116,9 @@ shape whole_down_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_ent_01(){
@@ -129,9 +129,9 @@ shape whole_ent_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_ent_02(){
@@ -143,9 +143,9 @@ shape whole_ent_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_ent_03(){
@@ -156,9 +156,9 @@ shape whole_ent_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_esc_01(){
@@ -169,9 +169,9 @@ shape whole_esc_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_esc_02(){
@@ -182,9 +182,9 @@ shape whole_esc_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_esc_03(){
@@ -195,9 +195,9 @@ shape whole_esc_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_left_01(){
@@ -208,9 +208,9 @@ shape whole_left_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_left_02(){
@@ -221,9 +221,9 @@ shape whole_left_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_left_03(){
@@ -234,9 +234,9 @@ shape whole_left_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_right_01(){
@@ -247,9 +247,9 @@ shape whole_right_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_right_02(){
@@ -260,9 +260,9 @@ shape whole_right_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_right_03(){
@@ -273,9 +273,9 @@ shape whole_right_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_s_01(){
@@ -286,9 +286,9 @@ shape whole_s_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_s_02(){
@@ -299,9 +299,9 @@ shape whole_s_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_s_03(){
@@ -312,9 +312,9 @@ shape whole_s_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_up_01(){
@@ -325,9 +325,9 @@ shape whole_up_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_up_02(){
@@ -338,9 +338,9 @@ shape whole_up_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_up_03(){
@@ -351,9 +351,9 @@ shape whole_up_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_w_01(){
@@ -364,9 +364,9 @@ shape whole_w_01(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_w_02(){
@@ -377,9 +377,9 @@ shape whole_w_02(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape whole_w_03(){
@@ -390,9 +390,9 @@ shape whole_w_03(){
 	short color[] = {39, 39, 39, 255};
 	short z = 1;
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 

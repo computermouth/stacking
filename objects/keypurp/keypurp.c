@@ -16,9 +16,9 @@ shape keypurp_a_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_a_02(){
@@ -35,9 +35,9 @@ shape keypurp_a_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_a_03(){
@@ -54,9 +54,9 @@ shape keypurp_a_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_d_01(){
@@ -73,9 +73,9 @@ shape keypurp_d_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_d_02(){
@@ -92,9 +92,9 @@ shape keypurp_d_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_d_03(){
@@ -111,9 +111,9 @@ shape keypurp_d_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_down_01(){
@@ -131,9 +131,9 @@ shape keypurp_down_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_down_02(){
@@ -151,9 +151,9 @@ shape keypurp_down_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_down_03(){
@@ -170,9 +170,9 @@ shape keypurp_down_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_ent_01(){
@@ -189,9 +189,9 @@ shape keypurp_ent_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_ent_02(){
@@ -209,9 +209,9 @@ shape keypurp_ent_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_ent_03(){
@@ -228,9 +228,9 @@ shape keypurp_ent_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_esc_01(){
@@ -247,9 +247,9 @@ shape keypurp_esc_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_esc_02(){
@@ -266,9 +266,9 @@ shape keypurp_esc_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_esc_03(){
@@ -285,9 +285,9 @@ shape keypurp_esc_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_left_01(){
@@ -304,9 +304,9 @@ shape keypurp_left_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_left_02(){
@@ -323,9 +323,9 @@ shape keypurp_left_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_left_03(){
@@ -342,9 +342,9 @@ shape keypurp_left_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_right_01(){
@@ -361,9 +361,9 @@ shape keypurp_right_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_right_02(){
@@ -380,9 +380,9 @@ shape keypurp_right_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_right_03(){
@@ -399,9 +399,9 @@ shape keypurp_right_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_s_01(){
@@ -418,9 +418,9 @@ shape keypurp_s_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_s_02(){
@@ -437,9 +437,9 @@ shape keypurp_s_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_s_03(){
@@ -456,9 +456,9 @@ shape keypurp_s_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_up_01(){
@@ -475,9 +475,9 @@ shape keypurp_up_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_up_02(){
@@ -494,9 +494,9 @@ shape keypurp_up_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_up_03(){
@@ -513,9 +513,9 @@ shape keypurp_up_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_w_01(){
@@ -532,9 +532,9 @@ shape keypurp_w_01(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_w_02(){
@@ -551,9 +551,9 @@ shape keypurp_w_02(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 shape keypurp_w_03(){
@@ -570,9 +570,9 @@ shape keypurp_w_03(){
 		y[i] += 10;
 	}
 	
-	shape sh = init_shape(x, y, points, color, z);
+	shape g_shape = init_shape(x, y, points, color, z);
 
-	return sh;
+	return g_shape;
 }
 
 
