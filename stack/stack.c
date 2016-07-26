@@ -7,18 +7,22 @@
 shape init_shape(short *x, short *y, short points, short *color, short z){
 	shape i;
 	
-	i.x = calloc(points, sizeof(short));
-	memcpy(i.x, x, points*sizeof(short));
+	//~ i.x = calloc(points, sizeof(short));
+	//~ memcpy(i.x, x, points*sizeof(short));
 	
-	i.y = calloc(points, sizeof(short));
-	memcpy(i.y, y, points*sizeof(short));
+	//~ i.y = calloc(points, sizeof(short));
+	//~ memcpy(i.y, y, points*sizeof(short));
 	
 	i.points = points;
 	
-	i.color = calloc(4, sizeof(short));
-	memcpy(i.color, color, 4*sizeof(short));
+	//~ i.color = calloc(4, sizeof(short));
+	//~ memcpy(i.color, color, 4*sizeof(short));
 	
 	i.z = z;
+	
+	i.x = x;
+	i.y = y;
+	i.color = color;
 	
 	return i;
 }
@@ -195,7 +199,7 @@ void del_stack(stack g_stack){
 	for(o = 0; o <= g_stack.used; o++){
 		int s;
 		for(s = 0; s <= g_stack.stk[o].used; s++){
-			del_shape(g_stack.stk[o].shp[s]);
+			//~ del_shape(g_stack.stk[o].shp[s]);
 		}
 		del_object(g_stack.stk[o]);
 	}
