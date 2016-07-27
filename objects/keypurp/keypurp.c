@@ -12,8 +12,8 @@ shape keypurp_a_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -31,8 +31,8 @@ shape keypurp_a_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -50,8 +50,8 @@ shape keypurp_a_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -69,8 +69,8 @@ shape keypurp_d_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -88,8 +88,8 @@ shape keypurp_d_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -107,8 +107,8 @@ shape keypurp_d_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -127,8 +127,8 @@ shape keypurp_down_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -147,8 +147,8 @@ shape keypurp_down_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -166,8 +166,8 @@ shape keypurp_down_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -185,8 +185,8 @@ shape keypurp_ent_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -205,8 +205,8 @@ shape keypurp_ent_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -224,8 +224,8 @@ shape keypurp_ent_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -243,8 +243,8 @@ shape keypurp_esc_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -262,8 +262,8 @@ shape keypurp_esc_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -281,8 +281,8 @@ shape keypurp_esc_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -300,8 +300,8 @@ shape keypurp_left_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -319,8 +319,8 @@ shape keypurp_left_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -338,8 +338,8 @@ shape keypurp_left_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -357,8 +357,8 @@ shape keypurp_right_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -376,8 +376,8 @@ shape keypurp_right_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -395,8 +395,8 @@ shape keypurp_right_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -414,8 +414,8 @@ shape keypurp_s_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -433,8 +433,8 @@ shape keypurp_s_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -452,8 +452,8 @@ shape keypurp_s_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -471,8 +471,8 @@ shape keypurp_up_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -490,8 +490,8 @@ shape keypurp_up_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -509,8 +509,8 @@ shape keypurp_up_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -528,8 +528,8 @@ shape keypurp_w_01(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -547,8 +547,8 @@ shape keypurp_w_02(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);
@@ -566,8 +566,8 @@ shape keypurp_w_03(){
 	
 	int i;
 	for(i = points; i >= 0; i--){
-		x[i] += 10;
-		y[i] += 10;
+		x[i] -= 100;
+		y[i] -= 100;
 	}
 	
 	shape g_shape = init_shape(x, y, points, color, z);

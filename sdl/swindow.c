@@ -4,8 +4,8 @@
 swindow init_swindow( swindow g_swindow ){
 	g_swindow.window	= 0;
 	g_swindow.renderer	= 0;
-	g_swindow.d_w		= 800;
-	g_swindow.d_h		= 500;
+	g_swindow.d_w		= 480;
+	g_swindow.d_h		= 272;
 	g_swindow.n_w		= g_swindow.d_w;
 	g_swindow.n_h		= g_swindow.d_h;
 	g_swindow.r			= 1.0;
