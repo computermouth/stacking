@@ -28,7 +28,7 @@ int init_sdl(swindow *g_swindow){
 			SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
 		
 		if(g_swindow->window != 0){
-			g_swindow->renderer = SDL_CreateRenderer(g_swindow->window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+			g_swindow->renderer = SDL_CreateRenderer(g_swindow->window, -1, SDL_RENDERER_ACCELERATED );
 		}else{
 			return 1;
 		}
