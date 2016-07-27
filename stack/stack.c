@@ -90,19 +90,19 @@ object push_object(object g_object, shape g_shape){
 	g_object.used++;
 	g_object.shp[g_object.top] = g_shape;
 	
-	//wasteful sort
-	shape key;
-	int j;
+	//~ //wasteful sort
+	//~ shape key;
+	//~ int j;
 	
-	for ( j = 0 ; j <= g_object.top ; j++ ){
-		key = g_object.shp[j];
-		int i = j - 1;
-		while ( i >= 0 && g_object.shp[i].z > key.z ) {
-			g_object.shp[i + 1] = g_object.shp[i];
-			i = i - 1;
-		}    
-		g_object.shp[i + 1] = key;
-	}
+	//~ for ( j = 0 ; j <= g_object.top ; j++ ){
+		//~ key = g_object.shp[j];
+		//~ int i = j - 1;
+		//~ while ( i >= 0 && g_object.shp[i].z > key.z ) {
+			//~ g_object.shp[i + 1] = g_object.shp[i];
+			//~ i = i - 1;
+		//~ }    
+		//~ g_object.shp[i + 1] = key;
+	//~ }
 	
 	return g_object;
 }
@@ -157,18 +157,18 @@ stack push_stack(stack g_stack, object g_object){
 	g_stack.stk[g_stack.top] = g_object;
 	
 	//wasteful sort
-	object key;
-	int j;
+	//~ object key;
+	//~ int j;
 	
-	for ( j = 0 ; j <= g_stack.top ; j++ ){
-		key = g_stack.stk[j];
-		int i = j - 1;
-		while ( i >= 0 && g_stack.stk[i].z > key.z ) {
-			g_stack.stk[i + 1] = g_stack.stk[i];
-			i = i - 1;
-		}    
-		g_stack.stk[i + 1] = key;
-	}
+	//~ for ( j = 0 ; j <= g_stack.top ; j++ ){
+		//~ key = g_stack.stk[j];
+		//~ int i = j - 1;
+		//~ while ( i >= 0 && g_stack.stk[i].z > key.z ) {
+			//~ g_stack.stk[i + 1] = g_stack.stk[i];
+			//~ i = i - 1;
+		//~ }    
+		//~ g_stack.stk[i + 1] = key;
+	//~ }
 	
 	return g_stack;
 }
