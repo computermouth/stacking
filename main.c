@@ -18,13 +18,15 @@ int main(){
 		
 	state g_state = init_state();
 	
+	o_whole g_o_whole = init_o_whole();
+	
 	while( !g_swindow.quit ){		
 		stack g_stack = init_stack();
 		
 		parse_event(&g_swindow.e, &g_swindow, &g_state);
 		
-		g_stack = push_stack(g_stack, push_keypurp(&g_state));
-		g_stack = push_stack(g_stack, push_keywhole(&g_state));
+		//~ g_stack = push_stack(g_stack, push_keypurp(&g_state));
+		g_stack = push_stack(g_stack, push_keywhole(&g_state, g_o_whole));
 		
 		g_swindow.renderer = draw_stack(g_stack, g_swindow.renderer, g_swindow.r);
 		
@@ -32,6 +34,8 @@ int main(){
 		
 		SDL_RenderPresent( g_swindow.renderer );
 	}
+	
+	del_o_whole(g_o_whole);
 	
 	SDL_DestroyWindow(g_swindow.window);
 	SDL_DestroyRenderer(g_swindow.renderer);

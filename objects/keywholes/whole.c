@@ -2,6 +2,96 @@
 #include "../../stack/stack.h"
 #include "whole.h"
 
+whole_01 init_whole_01(){
+	whole_01 g_whole_01;
+	
+	g_whole_01.whole_esc_01   = whole_esc_01();
+	g_whole_01.whole_ent_01   = whole_ent_01();
+	g_whole_01.whole_w_01     = whole_w_01();
+	g_whole_01.whole_a_01     = whole_a_01();
+	g_whole_01.whole_s_01     = whole_s_01();
+	g_whole_01.whole_d_01     = whole_d_01();
+	g_whole_01.whole_up_01    = whole_up_01();
+	g_whole_01.whole_down_01  = whole_down_01();
+	g_whole_01.whole_left_01  = whole_left_01();
+	g_whole_01.whole_right_01 = whole_right_01();
+	
+	return g_whole_01;
+}
+
+whole_02 init_whole_02(){
+	whole_02 g_whole_02;
+	
+	g_whole_02.whole_esc_02   = whole_esc_02();
+	g_whole_02.whole_ent_02   = whole_ent_02();
+	g_whole_02.whole_w_02     = whole_w_02();
+	g_whole_02.whole_a_02     = whole_a_02();
+	g_whole_02.whole_s_02     = whole_s_02();
+	g_whole_02.whole_d_02     = whole_d_02();
+	g_whole_02.whole_up_02    = whole_up_02();
+	g_whole_02.whole_down_02  = whole_down_02();
+	g_whole_02.whole_left_02  = whole_left_02();
+	g_whole_02.whole_right_02 = whole_right_02();
+	
+	return g_whole_02;
+}
+
+whole_03 init_whole_03(){
+	whole_03 g_whole_03;
+	
+	g_whole_03.whole_esc_03   = whole_esc_03();
+	g_whole_03.whole_ent_03   = whole_ent_03();
+	g_whole_03.whole_w_03     = whole_w_03();
+	g_whole_03.whole_a_03     = whole_a_03();
+	g_whole_03.whole_s_03     = whole_s_03();
+	g_whole_03.whole_d_03     = whole_d_03();
+	g_whole_03.whole_up_03    = whole_up_03();
+	g_whole_03.whole_down_03  = whole_down_03();
+	g_whole_03.whole_left_03  = whole_left_03();
+	g_whole_03.whole_right_03 = whole_right_03();
+	
+	return g_whole_03;
+}
+
+void del_whole_01(whole_01 g_whole_01){
+	del_shape( g_whole_01.whole_esc_01   );
+	del_shape( g_whole_01.whole_ent_01   );
+	del_shape( g_whole_01.whole_w_01     );
+	del_shape( g_whole_01.whole_a_01     );
+	del_shape( g_whole_01.whole_s_01     );
+	del_shape( g_whole_01.whole_d_01     );
+	del_shape( g_whole_01.whole_up_01    );
+	del_shape( g_whole_01.whole_down_01  );
+	del_shape( g_whole_01.whole_left_01  );
+	del_shape( g_whole_01.whole_right_01 );
+}
+
+void del_whole_02(whole_02 g_whole_02){
+	del_shape( g_whole_02.whole_esc_02   );
+	del_shape( g_whole_02.whole_ent_02   );
+	del_shape( g_whole_02.whole_w_02     );
+	del_shape( g_whole_02.whole_a_02     );
+	del_shape( g_whole_02.whole_s_02     );
+	del_shape( g_whole_02.whole_d_02     );
+	del_shape( g_whole_02.whole_up_02    );
+	del_shape( g_whole_02.whole_down_02  );
+	del_shape( g_whole_02.whole_left_02  );
+	del_shape( g_whole_02.whole_right_02 );
+}
+
+void del_whole_03(whole_03 g_whole_03){
+	del_shape( g_whole_03.whole_esc_03   );
+	del_shape( g_whole_03.whole_ent_03   );
+	del_shape( g_whole_03.whole_w_03     );
+	del_shape( g_whole_03.whole_a_03     );
+	del_shape( g_whole_03.whole_s_03     );
+	del_shape( g_whole_03.whole_d_03     );
+	del_shape( g_whole_03.whole_up_03    );
+	del_shape( g_whole_03.whole_down_03  );
+	del_shape( g_whole_03.whole_left_03  );
+	del_shape( g_whole_03.whole_right_03 );
+}
+
 shape whole_a_01(){
 	
 	short x[] = { 120, 122, 125, 188, 191, 193, 193, 193, 189, 182, 180, 175, 165, 146, 140, 134, 130, 122, 121, 120 };

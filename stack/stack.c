@@ -195,7 +195,7 @@ void del_stack(stack g_stack){
 	for(o = 0; o <= g_stack.used; o++){
 		int s;
 		for(s = 0; s <= g_stack.stk[o].used; s++){
-			del_shape(g_stack.stk[o].shp[s]);
+			//del_shape(g_stack.stk[o].shp[s]);
 		}
 		del_object(g_stack.stk[o]);
 	}
